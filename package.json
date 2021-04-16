@@ -7,8 +7,11 @@
     "compile": "esite compile src",
     "compile:watch": "esite compile src -w",
     "docs": "esite docs dev",
-    "docs:build": "esite docs build"
+    "docs:build": "esite docs build",
+    "predeploy": "yarn docs:build",
+    "deploy": "gh-pages -d docs_dist"
   },
+  "homepage": "https://github.com/weibo785424079/hook",
   "types": "dist/esm/index.d.ts",
   "files": [
     "dist",
@@ -21,6 +24,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@tms/esite-cli": "^0.0.1"
+    "@tms/esite-cli": "^0.0.1",
+    "gh-pages": "^3.1.0"
   }
 }

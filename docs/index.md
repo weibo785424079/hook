@@ -21,5 +21,5 @@ const App = () => {
     return <div onClick={() => setCount(c => c+1)}>count:{count}</div>
 }
 
-export default App
+export default App;
 ```
