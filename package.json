@@ -1,0 +1,26 @@
+{
+  "name": "@tms/site-hook",
+  "version": "1.0.0",
+  "main": "dist/esm/index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile": "esite compile src",
+    "compile:watch": "esite compile src -w",
+    "docs": "esite docs dev",
+    "docs:build": "esite docs build"
+  },
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "peerDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "react": "^16.14.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tms/esite-cli": "^0.0.1"
+  }
+}

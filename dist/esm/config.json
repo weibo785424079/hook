@@ -1,0 +1,46 @@
+{
+  "menus": {
+    "en-US": {
+      "*": [
+        {
+          "title": "Use-immutable",
+          "path": "/use-immutable",
+          "meta": {},
+          "children": [
+            {
+              "path": "/use-immutable",
+              "title": "Index",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "title": "Use-watch",
+          "path": "/use-watch",
+          "meta": {},
+          "children": [
+            {
+              "path": "/use-watch",
+              "title": "标题内容",
+              "meta": {}
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "locales": [
+    {
+      "name": "en-US",
+      "label": "English"
+    }
+  ],
+  "navs": {},
+  "title": "esite-hook",
+  "description": "esite的hook組件库",
+  "mode": "doc",
+  "repository": {
+    "branch": "master"
+  },
+  "theme": {}
+}
