@@ -5,4 +5,5 @@ export default defineConfig({
     title: '@tms/site-hook',
     description: 'site的hook組件库',
     outputPath: "docs_dist",
+    base: '/hook/'
 });
