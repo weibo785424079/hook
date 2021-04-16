@@ -1131,10 +1131,10 @@
     "@svgr/plugin-svgo" "^5.5.0"
     rollup-pluginutils "^2.8.2"
 
-"@tms/esite-cli@^0.0.1":
+"@tms/site-cli@^0.0.1":
   version "0.0.1"
-  resolved "http://npm.taimei.com:80/@tms%2fesite-cli/-/esite-cli-0.0.1.tgz#d9ec86fb1351ae1c2b5fad83e4a59c47f53921fc"
-  integrity sha512-XMm3gxTvZcdlfuXIz4RTz2CcNlb/v+85H2d5aDkfzlO3GjbuonxFwnBz75rUTMDngAIJSocNcaUM+mBOdsGpSA==
+  resolved "http://npm.taimei.com:80/@tms%2fsite-cli/-/site-cli-0.0.1.tgz#70683ab1f4b7c099375470e18b6d62a3bf1a904e"
+  integrity sha512-uuCGEuXehLtpwqye6ke+tWnVqGPO5QlbHglduqjou1UOVpcyHwP+/+u/TXuNnwrUqWTnJedKFEVQbKg/39zlCQ==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -1245,6 +1245,13 @@
   dependencies:
     "@types/react" "^16"
 
+"@types/react-dom@^17.0.3":
+  version "17.0.3"
+  resolved "http://npm.taimei.com:80/@types%2freact-dom/-/react-dom-17.0.3.tgz#7fdf37b8af9d6d40127137865bb3fff8871d7ee1"
+  integrity sha1-f983uK+dbUAScTeGW7P/+IcdfuE=
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-router-config@5.0.2", "@types/react-router-config@^5.0.2":
   version "5.0.2"
   resolved "http://npm.taimei.com:80/@types%2freact-router-config/-/react-router-config-5.0.2.tgz#4d3b52e71ed363a1976a12321e67b09a99ad6d10"
@@ -1279,7 +1286,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@^17.0.3":
   version "17.0.3"
   resolved "http://npm.taimei.com:80/@types%2freact/-/react-17.0.3.tgz#ba6e215368501ac3826951eef2904574c262cc79"
   integrity sha1-um4hU2hQGsOCaVHu8pBFdMJizHk=
@@ -7137,6 +7144,14 @@ react@16.x:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
+
+react@^17.0.2:
+  version "17.0.2"
+  resolved "http://npm.taimei.com:80/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  integrity sha1-0LXMUW0p6z7uOD91tihkz7aAADc=
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"

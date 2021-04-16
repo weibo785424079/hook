@@ -1,5 +1,5 @@
 node_modules
 src/.umi
 src/.umi-production
-/dist
-/docs_dist
+dist
+docs_dist
