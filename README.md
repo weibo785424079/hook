@@ -1,16 +1,14 @@
----
-title: 介绍
----
-
 ## Esite的hook组件库
+
 ### 开始使用
+
 ```bash
 yarn add @tms/site-hook
 ```
 
 ```tsx | pure
 import React,{useState} from 'react'
-import {useWatch} from '@tms/site-hook'
+import { useWatch } from '@tms/site-hook'
 
 const App = () => {
     const [count, setCount] = useState(1)
