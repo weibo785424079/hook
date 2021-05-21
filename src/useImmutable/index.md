@@ -9,9 +9,25 @@ group:
 # useImmutable
 
 ```tsx
-import React from 'react'
+
+import React, {useState} from 'react'
+import { useImmutable } from '@tms/site-hook'
 
 export default () => {
-    return <div>useImmutable</div>
+
+    const [count, setCount] = useState(0)
+    const value = useImmutable(count)
+
+    return <div>
+        <button onClick={() => setCount(c => c+1)}>加一</button>
+        <div>count: {count} value: {value}</div>
+    </div>
 }
+
+```
+
+## API
+
+```typescript
+  const value = useImmutable(() => <div>组件</div>)
 ```
