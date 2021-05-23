@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:import/typescript',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,18 +20,9 @@ module.exports = {
     'react',
     '@typescript-eslint',
   ],
-  settings: {
-    'import/extensions': [
-      '.tsx',
-      '.ts',
-      '.js',
-      '.jsx',
-    ],
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-  },
   rules: {
     'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    '@typescript-eslint/no-unused-vars': 1,
   },
 };
