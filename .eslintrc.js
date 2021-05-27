@@ -24,5 +24,10 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/no-unused-vars': 1,
+    'react/jsx-filename-extension': 0,
+    'no-param-reassign': 0,
+    'no-use-before-define': 0,
+    'no-redeclare': 0,
+    'react/jsx-props-no-spreading': 0,
   },
 };
