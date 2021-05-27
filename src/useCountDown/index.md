@@ -1,12 +1,12 @@
 ---
-title: useBoolean
+title: useCountDown
 group:
   title: 组件
   path: /
   order: 1
 ---
 
-# useDebounce
+# useCountDown
 
 ```tsx
 
@@ -15,9 +15,14 @@ import { useCountDown } from '@tms/site-hook'
 
 export default () => {
 
+    const [{isCountDowning, remaning},{ start }] =useCountDown()
 
     return <div>
-        <div>count: {1} debouncedCount: {2}</div>
+        <button onClick={() => start()}>开始倒计时</button>
+        <div>isCountDowning: {isCountDowning ? 'true':'false'} 
+            <br/>
+            remaning: {remaning}
+        </div>
     </div>
 }
 

@@ -9399,9 +9399,9 @@ rc-dropdown@^3.2.0:
     rc-trigger "^5.0.4"
 
 rc-menu@^9.0.0:
-  version "9.0.5"
-  resolved "http://npm.taimei.com:80/rc-menu/-/rc-menu-9.0.5.tgz#f5dbf3951080413cc7f84ebcf118407a87488898"
-  integrity sha1-9dvzlRCAQTzH+E688RhAeodIiJg=
+  version "9.0.6"
+  resolved "http://npm.taimei.com:80/rc-menu/-/rc-menu-9.0.6.tgz#afd36663ed1885af00127c397b33981c7c9fb9e9"
+  integrity sha1-r9NmY+0Yha8AEnw5ezOYHHyfuek=
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "2.x"
@@ -10173,9 +10173,9 @@ rollup-pluginutils@^2.3.1, rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.6.0,
     estree-walker "^0.6.1"
 
 rollup@^2.35.1:
-  version "2.50.1"
-  resolved "http://npm.taimei.com:80/rollup/-/rollup-2.50.1.tgz#5d52d5c65ade19164d56efec98f16a461c6df38e"
-  integrity sha1-XVLVxlreGRZNVu/smPFqRhxt844=
+  version "2.50.2"
+  resolved "http://npm.taimei.com:80/rollup/-/rollup-2.50.2.tgz#640c500c68c698f62efb01857e0ff06fcd18181f"
+  integrity sha1-ZAxQDGjGmPYu+wGFfg/wb80YGB8=
   optionalDependencies:
     fsevents "~2.3.1"
 

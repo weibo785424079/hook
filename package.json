@@ -20,9 +20,7 @@
     "dist",
     "package.json"
   ],
-  "dependencies": {
-    "resize-observer-polyfill": "^1.5.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@testing-library/react-hooks": "^5.1.1",
     "@tms/site-cli": "^0.0.1",
