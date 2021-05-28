@@ -1,5 +1,5 @@
 ---
-title: useBoolean
+title: useEventListner
 group:
   title: 组件
   path: /
@@ -15,9 +15,11 @@ import { useCountDown } from '@tms/site-hook'
 
 export default () => {
 
+    const {} = useCountDown()
 
     return <div>
-        <div>count: {1} debouncedCount: {2}</div>
+        <button onClick={() => setCount(c => c+1)}>加一</button>
+        <div>count: {count} debouncedCount: {deouncedCount}</div>
     </div>
 }
 

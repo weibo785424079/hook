@@ -1,6 +1,7 @@
 module.exports = {
   env: {
     browser: true,
+    node: true,
     es2021: true,
   },
   extends: [
@@ -29,5 +30,6 @@ module.exports = {
     'no-use-before-define': 0,
     'no-redeclare': 0,
     'react/jsx-props-no-spreading': 0,
+    'consistent-return': 0
   },
 };
