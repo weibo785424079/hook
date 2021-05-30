@@ -6,23 +6,24 @@ group:
   order: 1
 ---
 
-# useCountDown
+# useEventListener
 
 ```tsx
 
-import React, {useState} from 'react'
-import { useCountDown } from '@tms/site-hook'
+import React, { useState, useRef } from 'react'
+import { useEventListener } from '@tms/site-hook'
 
 export default () => {
-
-    const [{isCountDowning, remaning},{ start }] = useCountDown()
+    const ref = useRef()
+    useEventListener('click',() => {
+        alert('触发绑定事件')
+    }, 
+    {
+        target: ref
+    })
 
     return <div>
-        <button onClick={() => start()}>开始倒计时</button>
-        <div>isCountDowning: {isCountDowning ? 'true':'false'} 
-            <br/>
-            remaning: {remaning}
-        </div>
+        <button ref={ref}>触发事件</button>
     </div>
 }
 
@@ -31,6 +32,10 @@ export default () => {
 ## API
 
 ```typescript
-    const [count, setCount] = useState(0)
-const deouncedCount = useDebounce(count)
+   useEventListener('click',() => {
+        alert('触发绑定事件')
+    }, 
+    {
+        target: ref
+})
 ```

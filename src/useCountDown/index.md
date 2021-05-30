@@ -31,6 +31,5 @@ export default () => {
 ## API
 
 ```typescript
-    const [count, setCount] = useState(0)
-const deouncedCount = useDebounce(count)
+     const [{isCountDowning, remaning},{ start }] = useCountDown()
 ```

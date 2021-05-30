@@ -6,21 +6,15 @@ group:
   order: 2
 ---
 
-# useDocumentVisibility
+# useVirtualList
 
 ```tsx
 
-import React, {useState} from 'react'
-import { useImmutable } from '@tms/site-hook'
+import React from 'react'
 
 export default () => {
-
-    const [count, setCount] = useState(0)
-    const value = useImmutable(count)
-
     return <div>
-        <button onClick={() => setCount(c => c+1)}>加一</button>
-        <div>count: {count} value: {value}</div>
+        useVirtualList
     </div>
 }
 
@@ -29,5 +23,4 @@ export default () => {
 ## API
 
 ```typescript
-  const value = useImmutable(() => <div>组件</div>)
 ```

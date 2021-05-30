@@ -6,22 +6,33 @@ group:
   order: 2
 ---
 
-# useDocumentVisibility
+# useRequest
 
 ```tsx
 
-import React, {useState} from 'react'
-import { useImmutable } from '@tms/site-hook'
+import React, { useState,useCallback } from 'react'
+import { useRequest } from '@tms/site-hook'
 
 export default () => {
 
-    const [count, setCount] = useState(0)
-    const value = useImmutable(count)
+    const action = useCallback(() => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve('data')
+        }, 3000)
+      })
+    }, [])
 
-    return <div>
-        <button onClick={() => setCount(c => c+1)}>加一</button>
-        <div>count: {count} value: {value}</div>
-    </div>
+    const { result, loading, error, run } = useRequest(action)
+
+    return (
+      <div>
+        <div>loading: {loading ? 'loading' : ''}</div>
+        <div>result: {result}</div>
+        <div>error: {error}</div>
+        <button onClick={run}>再次求情</button>
+      </div>
+    )
 }
 
 ```
@@ -29,5 +40,12 @@ export default () => {
 ## API
 
 ```typescript
-  const value = useImmutable(() => <div>组件</div>)
+  const action = useCallback(() => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve('data')
+        }, 300)
+      })
+    }, [])
+const {result, loading, error} = useRequest(action)
 ```

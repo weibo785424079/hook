@@ -14,11 +14,14 @@ export const useDocumentVisibility = () => {
   return visible;
 };
 
-export const useDocumentShow = (cb: (...arrgs: any[]) => any) => {
+export const useDocumentShow = (cb: (...arrgs: any[]) => any, immediate = false) => {
   const visible = useDocumentVisibility();
   useWatch(visible, () => {
     if (visible) {
       cb();
     }
+  },
+  {
+    immediate,
   });
 };

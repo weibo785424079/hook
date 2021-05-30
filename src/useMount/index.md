@@ -6,22 +6,20 @@ group:
   order: 2
 ---
 
-# useDocumentVisibility
+# useMount
 
 ```tsx
 
 import React, {useState} from 'react'
-import { useImmutable } from '@tms/site-hook'
+import { useMount } from '@tms/site-hook'
 
 export default () => {
 
-    const [count, setCount] = useState(0)
-    const value = useImmutable(count)
+   useMount(() => {
+     alert('mounted')
+   })
 
-    return <div>
-        <button onClick={() => setCount(c => c+1)}>加一</button>
-        <div>count: {count} value: {value}</div>
-    </div>
+    return <div>useMount</div>
 }
 
 ```
@@ -29,5 +27,7 @@ export default () => {
 ## API
 
 ```typescript
-  const value = useImmutable(() => <div>组件</div>)
+   useMount(() => {
+     alert('mounted')
+})
 ```

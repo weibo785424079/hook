@@ -11,17 +11,14 @@ group:
 ```tsx
 
 import React, {useState} from 'react'
-import { useImmutable } from '@tms/site-hook'
+import { useDocumentShow } from '@tms/site-hook'
 
 export default () => {
 
-    const [count, setCount] = useState(0)
-    const value = useImmutable(count)
-
-    return <div>
-        <button onClick={() => setCount(c => c+1)}>加一</button>
-        <div>count: {count} value: {value}</div>
-    </div>
+   useDocumentShow(() => {
+     alert('useDocumentShow')
+   })
+  return <div>useDocumentShow</div>
 }
 
 ```
@@ -29,5 +26,7 @@ export default () => {
 ## API
 
 ```typescript
-  const value = useImmutable(() => <div>组件</div>)
+   useDocumentShow(() => {
+     alert(''useDocumentShow)
+})
 ```

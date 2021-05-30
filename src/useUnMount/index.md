@@ -6,22 +6,20 @@ group:
   order: 2
 ---
 
-# useDocumentVisibility
+# useUnMount
 
 ```tsx
 
-import React, {useState} from 'react'
-import { useImmutable } from '@tms/site-hook'
+import React from 'react'
+import { useUnMount } from '@tms/site-hook'
 
 export default () => {
 
-    const [count, setCount] = useState(0)
-    const value = useImmutable(count)
+   useUnMount(() => {
+     alert('unMount')
+   })
 
-    return <div>
-        <button onClick={() => setCount(c => c+1)}>加一</button>
-        <div>count: {count} value: {value}</div>
-    </div>
+    return <div>useUnMount</div>
 }
 
 ```
