@@ -16,7 +16,7 @@ import { useUnMount } from '@tms/site-hook'
 export default () => {
 
    useUnMount(() => {
-     alert('unMount')
+     console.log('unMount')
    })
 
     return <div>useUnMount</div>

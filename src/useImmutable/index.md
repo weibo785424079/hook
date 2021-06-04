@@ -1,33 +1,17 @@
 ---
 title: useImmutable
 group:
-  title: 组件
-  path: /
+  title: 高频
+  path: /n
   order: 2
 ---
 
 # useImmutable
 
-```tsx
-
-import React, {useState} from 'react'
-import { useImmutable } from '@tms/site-hook'
-
-export default () => {
-
-    const [count, setCount] = useState(0)
-    const value = useImmutable(count)
-
-    return <div>
-        <button onClick={() => setCount(c => c+1)}>加一</button>
-        <div>count: {count} value: {value}</div>
-    </div>
-}
-
-```
+<code src="./demos/demo1.tsx"/>
 
 ## API
 
 ```typescript
-  const value = useImmutable(() => <div>组件</div>)
+const value = useImmutable(() => <div>组件</div>);
 ```

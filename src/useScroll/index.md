@@ -1,25 +1,23 @@
 ---
-title: useMount
+title: useScroll
 group:
-  title: 高频
-  path: /n
+  title: 组件
+  path: /
   order: 2
 ---
 
-# useMount
+# usePersistFn
 
 ```tsx
 import React, { useState } from "react";
 import { useMount } from "@tms/site-hook";
 
 export default () => {
-  const [mounted, setMounted] = useState(false)
-  
   useMount(() => {
-    setMounted(true)
+    console.log("mounted");
   });
 
-  return <div>component: {mounted ? 'MOUNTED' : 'NOTMOUNTED'}</div>;
+  return <div>useMount</div>;
 };
 ```
 
@@ -27,6 +25,6 @@ export default () => {
 
 ```typescript
 useMount(() => {
-  ...dosomething
+  alert("mounted");
 });
 ```

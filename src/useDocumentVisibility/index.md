@@ -1,32 +1,29 @@
 ---
 title: useDocumentVisibility
 group:
-  title: 组件
-  path: /
-  order: 2
+  title: 高频
+  path: /n
+  order: 1
 ---
 
 # useDocumentVisibility
 
-```tsx
+<code src="./demos/demo1.tsx"/>
 
-import React, {useState} from 'react'
-import { useDocumentShow } from '@tms/site-hook'
-
-export default () => {
-
-   useDocumentShow(() => {
-     alert('useDocumentShow')
-   })
-  return <div>useDocumentShow</div>
-}
-
-```
-
-## API
+### API
 
 ```typescript
-   useDocumentShow(() => {
-     alert(''useDocumentShow)
-})
+const visible = useDocumentVisibility();
+```
+
+# useDocumentShow
+
+<code src="./demos/demo2.tsx"/>
+
+### API
+
+```typescript
+useDocumentShow(() => {
+  console.log("页面被唤醒了!");
+}, false);
 ```

@@ -1,36 +1,17 @@
 ---
 title: useQueryString
 group:
-  title: 组件
-  path: /
+  title: 高频
+  path: /n
   order: 1
 ---
 
-# useCountDown
+# useQueryString
 
-```tsx
-
-import React, {useState} from 'react'
-import { useCountDown } from '@tms/site-hook'
-
-export default () => {
-
-    const [{isCountDowning, remaning},{ start }] = useCountDown()
-
-    return <div>
-        <button onClick={() => start()}>开始倒计时</button>
-        <div>isCountDowning: {isCountDowning ? 'true':'false'} 
-            <br/>
-            remaning: {remaning}
-        </div>
-    </div>
-}
-
-```
+<code src="./demos/demo1.tsx" />
 
 ## API
 
 ```typescript
-    const [count, setCount] = useState(0)
-const deouncedCount = useDebounce(count)
+const query = useQueryString()
 ```

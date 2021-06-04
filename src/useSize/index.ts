@@ -6,7 +6,7 @@ import {
 type Arg = HTMLElement | (() => HTMLElement) | null;
 type Size = { width?: number; height?: number };
 
-function useSize<T extends HTMLElement = HTMLDivElement>(arg: Arg): [Size];
+function useSize(arg: Arg): [Size];
 function useSize<T extends HTMLElement = HTMLDivElement>(): [Size, RefObject<T>];
 function useSize<T extends HTMLElement = HTMLDivElement>(...args: [Arg] | []):
 [Size, RefObject<T>?] {
@@ -27,10 +27,9 @@ function useSize<T extends HTMLElement = HTMLDivElement>(...args: [Arg] | []):
     const targetElement = hasPassedInElement ? passedInElement : element.current;
 
     if (!targetElement) {
-      return () => {
-        //
-      };
+      return () => {};
     }
+    // @ts-ignore
     const resizeObserver = new ResizeObserver((entries) => {
       entries.forEach((entry) => {
         setState({

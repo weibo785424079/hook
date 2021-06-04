@@ -4,7 +4,7 @@ import { useDebounce, useDebounceFn } from './useDebounce';
 import { useDocumentVisibility, useDocumentShow } from './useDocumentVisibility';
 import useEventListener from './useEventListener';
 import useImmutable from './useImmutable';
-import useModal from './useModal';
+import useModal, { createUseComponent } from './useModal';
 import useMount from './useMount';
 import usePesisFn from './usePersistFn';
 import useQueryString from './useQueryString';
@@ -28,6 +28,7 @@ export {
   useDocumentShow,
   useImmutable,
   useModal,
+  createUseComponent,
   useMount,
   usePesisFn,
   useQueryString,

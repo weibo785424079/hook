@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import useUnMount from '../useUnMount';
 
 const useCountDown = (time = 60) => {
   const [isCountDowning, setCountDowning] = useState(false);
@@ -7,7 +8,7 @@ const useCountDown = (time = 60) => {
 
   const start = () => {
     clearTimeout(timer.current);
-    setRemaining(time);
+    setRemaining(time - 1);
     setCountDowning(true);
     const run = () => {
       timer.current = window.setTimeout(() => {
@@ -23,6 +24,13 @@ const useCountDown = (time = 60) => {
     };
     run();
   };
+
+  useUnMount(() => {
+    if (timer.current) {
+      clearTimeout(timer.current);
+    }
+  });
+
   return [{ isCountDowning, remaning }, { start }] as const;
 };
 

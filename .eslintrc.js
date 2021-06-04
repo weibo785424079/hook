@@ -22,6 +22,8 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'no-console': 0,
+    'max-len': ['error', {code: 120}],
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/no-unused-vars': 1,

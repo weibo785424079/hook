@@ -16,7 +16,7 @@ import { useEventListener } from '@tms/site-hook'
 export default () => {
     const ref = useRef()
     useEventListener('click',() => {
-        alert('触发绑定事件')
+        console.log('触发绑定事件')
     }, 
     {
         target: ref

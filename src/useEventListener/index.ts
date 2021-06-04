@@ -7,7 +7,7 @@ type Options<T extends Target = Target> = {
     capture?: boolean;
     once?: boolean;
     passive?: boolean;
-  };
+};
 
 function useEventListener(eventName: string, handler: Function, options: Options = {}) {
   const handlerRef = useRef<Function>();

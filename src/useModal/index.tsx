@@ -1,13 +1,12 @@
 import React, { useState, useCallback, useRef } from 'react';
-// import { Modal } from 'antd';
+import { Modal } from 'antd';
 import { ModalProps } from 'antd/es/modal';
 import useImmutable from '../useImmutable';
+import 'antd/lib/modal/style/css';
 
-interface UseMdoal extends ModalProps {
-    isFullScreen?: boolean;
-}
+interface UseMdoal extends ModalProps {}
 
-export const useModal = (options: UseMdoal = {}) => {
+const useModal = (options: UseMdoal = {}) => {
   const [visible, setVisible] = useState(false);
   const show = useCallback(() => setVisible(true), []);
   const hide = useCallback(() => setVisible(false), []);
@@ -17,9 +16,8 @@ export const useModal = (options: UseMdoal = {}) => {
   const visibleRef = useRef(visible);
   visibleRef.current = visible;
 
-  const RenderModal = React.useRef(({ children, ...rest }) => {
+  const RenderModal = useImmutable(({ children, ...rest }) => {
     const props = {
-      isFullScreen: false,
       destroyOnClose: true,
       onCancel: hide,
       onOk: hide,
@@ -28,11 +26,11 @@ export const useModal = (options: UseMdoal = {}) => {
       ...propsRef.current,
     };
     return (
-      <Modal className={props.isFullScreen ? 'tms-modal-fullscreen' : ''} {...props}>
+      <Modal {...props}>
         {children}
       </Modal>
     );
-  }).current;
+  });
 
   return {
     hide, show, visible, RenderModal,
@@ -50,7 +48,7 @@ export function createUseComponent<T = any, P = any>(
     const { RenderModal, ...rest } = useModal(options);
     const ref = useRef<P>();
 
-    const render = useImmutable((data: T) => {
+    const Render = useImmutable((data: T) => {
       const WrappedComponentProps = {
         ...data,
         customRef: ref,
@@ -62,7 +60,7 @@ export function createUseComponent<T = any, P = any>(
       );
     });
 
-    return { ...rest, render, ref };
+    return { ...rest, Render, ref };
   };
 }
 

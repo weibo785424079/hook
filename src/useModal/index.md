@@ -1,26 +1,21 @@
 ---
 title: useModal
 group:
-  title: 组件
-  path: /
+  title: 高频
+  path: /n
   order: 2
 ---
 
 # useModal
 
-```tsx
+### 常规用法
+<code src="./demos/demo1.tsx"/>
 
-import React, {useState} from 'react'
-import { useModal } from '@tms/site-hook'
-
-export default () => {
-    return <div>useModal</div>
-}
-
-```
+### 快捷用法
+<code src="./demos/demo2.tsx"/>
 
 ## API
 
 ```typescript
-  const value = useImmutable(() => <div>组件</div>)
+const value = useImmutable(() => <div>组件</div>);
 ```
