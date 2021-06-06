@@ -6,7 +6,7 @@ import useEventListener from './useEventListener';
 import useImmutable from './useImmutable';
 import useModal, { createUseComponent } from './useModal';
 import useMount from './useMount';
-import usePesisFn from './usePersistFn';
+import usePersistFn from './usePersistFn';
 import useQueryString from './useQueryString';
 import useRequest from './useRequest';
 import useScroll from './useScroll';
@@ -30,7 +30,7 @@ export {
   useModal,
   createUseComponent,
   useMount,
-  usePesisFn,
+  usePersistFn,
   useQueryString,
   useRequest,
   useScroll,

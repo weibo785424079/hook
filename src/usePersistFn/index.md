@@ -10,21 +10,20 @@ group:
 
 ```tsx
 import React, { useState } from "react";
-import { useMount } from "@tms/site-hook";
+import { usePersistFn } from "@tms/site-hook";
 
 export default () => {
-  useMount(() => {
-    console.log("mounted");
-  });
-
-  return <div>useMount</div>;
+  const fn = usePersistFn(() => {
+    console.log('usePersitFn')
+  })
+  return <div>usePersistFn</div>;
 };
 ```
 
 ## API
 
 ```typescript
-useMount(() => {
-  alert("mounted");
-});
+const fn = usePersitFn(() => {
+  console.log('usePersitFn')
+})
 ```

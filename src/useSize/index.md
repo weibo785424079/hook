@@ -29,4 +29,6 @@ export default () => {
 
 ```typescript
   const [{width,height}, ref] = useSize()
+
+const [{width,height}] = useSize(document.body)
 ```

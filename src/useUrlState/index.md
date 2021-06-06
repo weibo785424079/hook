@@ -8,17 +8,7 @@ group:
 
 # useUrlState
 
-```tsx
-
-import React, { useEffect } from 'react'
-import { useUrlState } from '@tms/site-hook'
-
-export default () => {
-    return (
-        <div>
-        213
-        </div>)
-}
+<code src="./demos/demo1.tsx" />
 
 ```
 

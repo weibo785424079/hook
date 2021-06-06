@@ -12,6 +12,7 @@ group:
 
 import React, { useState, useRef } from 'react'
 import { useEventListener } from '@tms/site-hook'
+import Button from 'antd/es/button'
 
 export default () => {
     const ref = useRef()
@@ -23,7 +24,7 @@ export default () => {
     })
 
     return <div>
-        <button ref={ref}>触发事件</button>
+        <Button ref={ref}>触发事件</Button>
     </div>
 }
 

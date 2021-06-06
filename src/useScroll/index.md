@@ -6,25 +6,13 @@ group:
   order: 2
 ---
 
-# usePersistFn
+# useScroll
 
-```tsx
-import React, { useState } from "react";
-import { useMount } from "@tms/site-hook";
-
-export default () => {
-  useMount(() => {
-    console.log("mounted");
-  });
-
-  return <div>useMount</div>;
-};
-```
+<code src="./demos/demo1.tsx" />
 
 ## API
 
 ```typescript
-useMount(() => {
-  alert("mounted");
-});
+const ref = useRef<HTMLDivElement>(null);
+const position = useScroll(ref);
 ```

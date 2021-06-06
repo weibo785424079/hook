@@ -12,13 +12,14 @@ group:
 
 import React, { useEffect } from 'react'
 import { useUpdate } from '@tms/site-hook'
+import Button from 'antd/es/button';
 
 export default () => {
 
     const update = useUpdate()
     return (
         <div>
-            <button onClick={update}>update, </button>
+            <Button onClick={update}>update</Button>
             <div>{Math.random()}</div>
         </div>)
 }
