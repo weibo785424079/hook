@@ -22,12 +22,12 @@ const useDebounceFn = <T>(fn: (...args: any[]) => any, deps: T, ms = 300) => {
   return [cancel];
 };
 
-const useDebounce = <T>(value: T) => {
+const useDebounce = <T>(value: T, t = 300) => {
   const [val, setVal] = useState<T>(value);
 
   useDebounceFn(() => {
     setVal(value);
-  }, value);
+  }, value, t);
 
   return val;
 };
