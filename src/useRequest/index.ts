@@ -14,7 +14,7 @@ export type PromiseType<T> = T extends Promise<infer P> ? P : T;
 interface Result<R, T extends (...args: any[]) => any> {
     run: T;
     loading: boolean;
-    error: Error | null;
+    error: Error | undefined;
     result: R;
 }
 
@@ -43,7 +43,7 @@ function useRequest<R = any, T extends(...args: any[]) => any = (...args: any[])
 
   const timer = useRef<number | null>(null);
 
-  const initValue = { loading: false, result: null, error: null };
+  const initValue = { loading: false, result: undefined, error: undefined };
 
   const [value, dispatch] = useReducer(
     (state: Result<R, T>, action) => ({ ...state, ...action }),
@@ -82,13 +82,13 @@ function useRequest<R = any, T extends(...args: any[]) => any = (...args: any[])
         if (isCurrent(fn)) {
           closeLoading({
             loading: false,
-            error: null,
+            error: undefined,
             result: optionRef.current.handelResult(result),
           });
         }
       } catch (error) {
         if (isCurrent(fn)) {
-          closeLoading({ loading: false, error, result: null });
+          closeLoading({ loading: false, error, result: undefined });
         }
         console.log(error);
       }

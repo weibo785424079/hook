@@ -46,5 +46,5 @@ const { result, loading, error } = useRequest(action, option);
 |--|--|--|
 | run | 函数执行方法  | `Function` |
 | loading | 是否正在请求 | `boolean` 
-| error | 执行异常  | `null \| Error` |
-| result | 返回的结果  | `null \| T`|
+| error | 执行异常  | `undefined \| Error` |
+| result | 返回的结果  | `undefined \| T`|
