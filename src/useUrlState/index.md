@@ -10,10 +10,9 @@ group:
 
 <code src="./demos/demo1.tsx" />
 
-```
 
 ## API
 
 ```typescript
-  const update = useUpdate()
+const [state, setState] = useUrlState({ name: 123 });
 ```

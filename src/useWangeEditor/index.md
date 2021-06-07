@@ -6,24 +6,6 @@ group:
   order: 2
 ---
 
-# useUrlState
+# useWangeEditor
 
-```tsx
-
-import React, { useEffect } from 'react'
-import { useUrlState } from '@tms/site-hook'
-
-export default () => {
-    return (
-        <div>
-        213
-        </div>)
-}
-
-```
-
-## API
-
-```typescript
-  const update = useUpdate()
-```
+<code>暂未实现</code>

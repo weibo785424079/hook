@@ -37,6 +37,7 @@ const { result, loading, error } = useRequest(action, option);
 | manul | 是否手动执行 | 可选 | `boolean` | `false` |
 | delay | loading延时时间 | 可选 | `number` | `1000` |
 | immediate | 是否在组件初次挂载时执行 | 可选 | `boolean` | `true` |
+| handelResult | 返回值处理函数 | 可选 | `function` | `d => d` |
 
 
 ### Result
@@ -45,5 +46,5 @@ const { result, loading, error } = useRequest(action, option);
 |--|--|--|
 | run | 函数执行方法  | `Function` |
 | loading | 是否正在请求 | `boolean` 
-| error | 是否在组件初次挂载时执行  | `null \| Error` |
-| result | 是否在组件初次挂载时执行  | `null \| T`|
+| error | 执行异常  | `null \| Error` |
+| result | 返回的结果  | `null \| T`|

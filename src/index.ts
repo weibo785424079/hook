@@ -11,7 +11,7 @@ import useQueryString from './useQueryString';
 import useRequest from './useRequest';
 import useScroll from './useScroll';
 import useSize from './useSize';
-import useStore from './useStore';
+import createUseStore from './useStore';
 import useUnMount from './useUnMount';
 import useUpdate from './useUpdate';
 import useUrlState from './useUrlState';
@@ -35,7 +35,7 @@ export {
   useRequest,
   useScroll,
   useSize,
-  useStore,
+  createUseStore,
   useUnMount,
   useUpdate,
   useUrlState,

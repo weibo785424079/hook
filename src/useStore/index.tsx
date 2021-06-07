@@ -2,7 +2,7 @@ import React, {
   createContext, useContext, useReducer, useMemo, useRef, useCallback,
 } from 'react';
 
-function useStore<T>(reducer: (...args: any[]) => T, initState: T) {
+function createUseStore<T>(reducer: (...args: any[]) => T, initState: T) {
   const StateContext = createContext([initState, () => initState] as [T, React.DispatchWithoutAction]);
 
   const useContextState = () => useContext(StateContext);
@@ -16,7 +16,7 @@ function useStore<T>(reducer: (...args: any[]) => T, initState: T) {
     return <StateContext.Provider value={value as any}>{children}</StateContext.Provider>;
   };
 
-  const useActions = (actions: {[key:string]: (...args: any[]) => T}) => {
+  const useActions = (actions: {[key:string]: (...args: any[]) => any}) => {
     const [state, dispatch] = useContextState();
     const fns = React.useRef(actions);
     const stateRef = useRef(state);
@@ -46,4 +46,4 @@ function useStore<T>(reducer: (...args: any[]) => T, initState: T) {
   };
 }
 
-export default useStore;
+export default createUseStore;

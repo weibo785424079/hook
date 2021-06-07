@@ -27,5 +27,7 @@ export default () => {
 ## API
 
 ```typescript
-  const value = useImmutable(() => <div>组件</div>)
+useUnMount(() => {
+  console.log('unMount')
+})
 ```

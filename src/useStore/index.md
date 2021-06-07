@@ -8,19 +8,14 @@ group:
 
 # useStore
 
-```tsx
-
-import React, { useState } from 'react'
-import { useImmutable } from '@tms/site-hook'
-
-export default () => {
-  return <div>useStore</div>
-}
-
-```
+<code src="./demos/demo1.tsx" />
 
 ## API
 
 ```typescript
-  
+const {
+  useContextState,
+  useActions,
+  withProvider,
+} = createUseStore(reducer, initState);
 ```

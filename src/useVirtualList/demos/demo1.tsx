@@ -1,11 +1,9 @@
 import React from 'react';
 import { useVirtualList } from '@tms/site-hook';
-import './demo1.less';
 
-const Item = ({ text } : {text: string}) => (
+const Item = ({ text, index } : {text: string, index: number}) => (
   <div
-    className="use-virtuallist-container-item"
-    style={{ height: 50 }}
+    style={{ height: 50, background: index % 2 === 0 ? '#ccc' : 'transparent' }}
   >
     {text}
   </div>
@@ -21,10 +19,10 @@ export default () => {
   } = useVirtualList(data, { itemHeight: 50 });
 
   return (
-    <div className="use-virtuallist-container" {...containerProps}>
+    <div {...containerProps} style={{ height: '300px', overflow: 'auto' }}>
       <div {...wrapperProps}>
         {
-              list.map((i) => <Item key={i.index} text={String(i.data)} />)
+              list.map((i) => <Item key={i.index} index={i.index} text={String(i.data)} />)
           }
       </div>
     </div>

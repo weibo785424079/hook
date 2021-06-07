@@ -1,7 +1,8 @@
 import React, { useCallback } from 'react';
 import { useRequest } from '@tms/site-hook';
-import { Button } from 'antd';
-import 'antd/lib/button/style/css';
+import Button from 'antd/es/button';
+
+type Res = number;
 
 export default () => {
   const action = useCallback(() => new Promise((resolve) => {
@@ -12,7 +13,13 @@ export default () => {
 
   const {
     result, loading, error, run,
-  } = useRequest(action, { delay: 0 });
+  } = useRequest<Res>(action,
+    {
+      delay: 0,
+      handelResult(res: Res) {
+        return res;
+      },
+    });
 
   return (
     <div>
